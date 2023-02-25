@@ -2095,6 +2095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 466546522}
   - component: {fileID: 466546521}
+  - component: {fileID: 466546523}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2114,9 +2115,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0469a4d01824f2c41ab1d2a491b88e70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Money: 0
+  MoneyAdded: 0.25
   StartTimer: 0
   MoneyText: {fileID: 1916893332}
-  TimerText: {fileID: 0}
 --- !u!4 &466546522
 Transform:
   m_ObjectHideFlags: 0
@@ -2132,6 +2134,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &466546523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466546520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c9139300ae9bb40aede4799b18c61f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Money: 0
+  MoneyAdded: 0.25
+  StartTimer: 0
+  MoneyText: {fileID: 1916893332}
+  LandPrice: 5
+  LandBought: 0
+  GameManager: {fileID: 466546521}
 --- !u!1 &477410234
 GameObject:
   m_ObjectHideFlags: 0
@@ -4892,7 +4913,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1131907420}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 466546523}
+        m_TargetAssemblyTypeName: BuyLandBtn, Assembly-CSharp
+        m_MethodName: BuyLand
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1131907420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4943,9 +4976,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c9139300ae9bb40aede4799b18c61f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Money: 0
+  MoneyAdded: 0.25
   StartTimer: 0
   MoneyText: {fileID: 0}
-  TimerText: {fileID: 0}
   LandPrice: 5
   LandBought: 0
   GameManager: {fileID: 466546521}
