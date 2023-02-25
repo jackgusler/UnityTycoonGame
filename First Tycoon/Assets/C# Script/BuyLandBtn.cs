@@ -31,6 +31,7 @@ public class BuyLandBtn : GameScript
         }
         //BuyLandBtn
         GameManager.Money = GameManager.Money - 5;
+        //Test
         Destroy(GameManager.MoneyText);
         LandBought = 1;
     }
