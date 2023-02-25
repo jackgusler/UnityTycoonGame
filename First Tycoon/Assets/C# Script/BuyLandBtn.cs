@@ -5,8 +5,8 @@ using UnityEngine;
 public class BuyLandBtn : GameScript
 {
     //GameScript g = new GameScript();
-    public int LandPrice = 5;
-    public int LandBought = 0;
+    public float LandPrice = 5;
+    public float LandBought = 0;
     public GameScript GameManager;
     // Start is called before the first frame update
     void Start()
@@ -30,8 +30,6 @@ public class BuyLandBtn : GameScript
             return;
         }
         //BuyLandBtn
-        GameManager.Money -= 5;
-        //Test
         Destroy(GameManager.MoneyText);
         LandBought = 1;
     }
