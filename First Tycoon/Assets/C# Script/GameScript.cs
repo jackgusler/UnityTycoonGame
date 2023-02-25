@@ -6,11 +6,10 @@ using UnityEngine.UI;
 public class GameScript : MonoBehaviour
 {
 
-    public decimal Money = 0.0m;
-    public decimal MoneyAdded = 0.25m;
+    public double Money = 0.00;
+    public double MoneyAdded = 0.25;
     public int StartTimer = 0;
     public Text MoneyText;
-    public Text TimerText;
     // Start is called before the first frame update
     void Start()
     {
